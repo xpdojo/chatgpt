@@ -8,7 +8,7 @@ def main(
     # Set up the OpenAI API client
     if api_key is None:
         try:
-            with open("api.key") as f:
+            with open("api.key", "rt") as f:
                 api_key = f.read()
                 api_key = api_key.strip().replace("\n", "")
         except FileNotFoundError:
